@@ -1,0 +1,41 @@
+﻿<Scheduler>
+  <Name>WorkOrders Scheduler</Name>
+  <ResourceEntity>fs_resource</ResourceEntity>
+  <ResourceViews>fs_resource.*:fs_resource.@Resources</ResourceViews>
+  <ActivityName>fs_workorderschedule</ActivityName>
+  <TimeOffsName>fs_time_off</TimeOffsName>
+  <TimeOffsColor>rgba(217,40,40,1)</TimeOffsColor>
+  <TimeOffsBorderColor>rgb(163,164,165)</TimeOffsBorderColor>
+  <TimeOffsTextColor>rgb(255,255,255)</TimeOffsTextColor>
+  <TimeOffsStartField>from</TimeOffsStartField>
+  <TimeOffsEndField>to</TimeOffsEndField>
+  <TimeOffsResourceField>resourceid</TimeOffsResourceField>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <TravelToField>scheduledtravelto</TravelToField>
+  <TravelFromField>scheduledtravelfrom</TravelFromField>
+  <TravelModeField>travelmode</TravelModeField>
+  <ArrivedOnField>arrivedon</ArrivedOnField>
+  <StartedOnField>startedon</StartedOnField>
+  <EndednOnField>endedon</EndednOnField>
+  <LookupField>workorderid</LookupField>
+  <ResourceField>resourceid</ResourceField>
+  <StatusField>statuscode</StatusField>
+  <StatusCodeList>
+    <StatusCode borderColor="rgba(25,126,68,1)" textColor="rgba(255,255,255,1)" taskStatusType="1" isSecondaryValue="false" color="#27c469" value="1" name="Planned" />
+    <StatusCode borderColor="rgba(44,96,149,1)" textColor="rgba(255,255,255,1)" taskStatusType="2" isSecondaryValue="false" color="#4897e6" value="2" name="Traveling" />
+    <StatusCode borderColor="rgba(44,96,149,1)" textColor="rgba(64,64,64,1)" taskStatusType="2" isSecondaryValue="true" color="#a3cbf2" value="3" name="Arrived" />
+    <StatusCode borderColor="rgba(44,96,149,1)" textColor="rgba(255,255,255,1)" taskStatusType="2" isSecondaryValue="true" color="#4897e6" value="4" name="Working" />
+    <StatusCode borderColor="rgba(120,120,120,1)" textColor="rgba(64,64,64,1)" taskStatusType="2" isSecondaryValue="false" color="#c9e0f8" value="5" name="On Break" />
+    <StatusCode borderColor="rgba(154,119,0,1)" textColor="rgba(64,64,64,1)" taskStatusType="5" isSecondaryValue="false" color="#ffc400" value="6" name="Completed" />
+    <StatusCode borderColor="rgba(144,53,53,1)" textColor="rgba(64,64,64,1)" taskStatusType="6" isSecondaryValue="false" color="#f2c9c9" value="7" name="Canceled" />
+  </StatusCodeList>
+  <WorkEntity>fs_workorder</WorkEntity>
+  <WorkViews>fs_workorder.@Scheduler Ready WorkOrders</WorkViews>
+  <HolidayEntityName>resco_holiday</HolidayEntityName>
+  <HolidayMonthField>month</HolidayMonthField>
+  <HolidayDayField>day</HolidayDayField>
+  <CreateRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Activity Entity.name&lt;/var&gt;&lt;func&gt;AddPrefix&lt;/func&gt;&lt;arg&gt;String:SCH-&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Activity Entity.statuscode&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Status:1&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Source Entity.statuscode&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Status:5&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</CreateRule>
+  <BorderWidth>2</BorderWidth>
+  <BorderRadius>4</BorderRadius>
+</Scheduler>

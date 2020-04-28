@@ -1,0 +1,30 @@
+﻿<Scheduler>
+  <Name>Accounts Scheduler</Name>
+  <ResourceEntity>systemuser</ResourceEntity>
+  <ResourceViews>systemuser.*:systemuser.@Users</ResourceViews>
+  <ActivityName>appointment</ActivityName>
+  <TimeOffsColor>rgba(0,0,0,0)</TimeOffsColor>
+  <TimeOffsBorderColor>rgba(0,0,0,0)</TimeOffsBorderColor>
+  <TimeOffsTextColor>rgba(0,0,0,0)</TimeOffsTextColor>
+  <StartDateField>scheduledstart</StartDateField>
+  <EndDateField>scheduledend</EndDateField>
+  <LookupField>regardingobjectid</LookupField>
+  <ResourceField>ownerid</ResourceField>
+  <StatusField>statuscode</StatusField>
+  <StatusCodeList>
+    <StatusCode borderColor="rgba(25,126,68,1)" textColor="rgba(64,64,64,1)" taskStatusType="1" isSecondaryValue="false" color="#c0f462" value="1" name="Free" />
+    <StatusCode borderColor="rgba(25,126,68,1)" textColor="white" taskStatusType="1" isSecondaryValue="true" color="#1bb837" value="2" name="Tentative" />
+    <StatusCode borderColor="rgba(154,119,0,1)" textColor="rgba(64,64,64,1)" taskStatusType="5" isSecondaryValue="false" color="rgb(113, 183, 230)" value="3" name="Completed" />
+    <StatusCode borderColor="rgba(144,53,53,1)" textColor="white" taskStatusType="6" isSecondaryValue="false" color="#e76fee" value="4" name="Canceled" />
+    <StatusCode borderColor="rgba(44,96,149,1)" textColor="white" taskStatusType="2" isSecondaryValue="false" color="#f55f5f" value="5" name="Busy" />
+    <StatusCode borderColor="rgba(64,64,64,1)" textColor="rgba(255,255,255,1)" taskStatusType="7" isSecondaryValue="false" color="rgba(163, 164, 165, 0.8)" value="6" name="Out of Office" />
+  </StatusCodeList>
+  <WorkEntity>account</WorkEntity>
+  <WorkViews>account.*:account.@All Accounts - scheduler</WorkViews>
+  <HolidayEntityName>resco_holiday</HolidayEntityName>
+  <HolidayMonthField>month</HolidayMonthField>
+  <HolidayDayField>day</HolidayDayField>
+  <CreateRule>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Activity Entity.scheduledstart&lt;/var&gt;&lt;func&gt;SetNow&lt;/func&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Activity Entity.scheduledend&lt;/var&gt;&lt;func&gt;AddHours&lt;/func&gt;&lt;arg&gt;var:Activity Entity.scheduledstart&lt;/arg&gt;&lt;arg&gt;Integer:2&lt;/arg&gt;&lt;/function&gt;&lt;/Workflow&gt;</CreateRule>
+  <BorderWidth>2</BorderWidth>
+  <BorderRadius>4</BorderRadius>
+</Scheduler>
