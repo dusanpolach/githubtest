@@ -1,5 +1,5 @@
 ﻿Manufacturer=Resco
-ProductTitle=githubtest
+ProductTitle=githubtest2
 ProductSubTitle=For Microsoft Dynamics CRM
 PoweredBy=Powered by Resco.Net
 Icon=Logo.Logo.png
