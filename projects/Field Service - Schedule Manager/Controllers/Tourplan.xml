@@ -1,0 +1,20 @@
+﻿<Tourplan>
+  <Items>
+    <TourplanComponent>
+      <Binding>task</Binding>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>appointment</Binding>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>activity</Binding>
+    </TourplanComponent>
+    <TourplanComponent>
+      <Binding>fs_time_off</Binding>
+    </TourplanComponent>
+  </Items>
+  <Version>1</Version>
+  <AllowedViews>activity.*:activity.@All Activities:appointment.*:appointment.@All Appointments:task.*:task.@All Tasks:fs_time_off.*:fs_time_off.@Default</AllowedViews>
+  <BusinessDaysMask>0</BusinessDaysMask>
+  <ViewsMask>0</ViewsMask>
+</Tourplan>
