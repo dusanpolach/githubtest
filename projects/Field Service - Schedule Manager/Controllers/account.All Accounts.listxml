@@ -13,6 +13,7 @@
     <string>address1_city</string>
     <string>id</string>
     <string>name</string>
+    <string>parentaccountid</string>
     <string>address1_postalcode</string>
     <string>address1_line1</string>
   </SerializedBindings>

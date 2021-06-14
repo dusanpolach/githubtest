@@ -1,0 +1,3 @@
+﻿<tree entity="account" view="All Accounts">
+  <parent entity="account" view="All Accounts" levelField="parentaccountid" recursiveField="parentaccountid"/>
+</tree>
